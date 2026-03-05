@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="app-header">
+        <h1>Todos</h1>
+        <p>List rendering with empty-state handling.</p>
+      </header>
+
+      <div class="controls">
+        <button id="show-sample" type="button">Show Sample Todos</button>
+        <button id="show-empty" type="button">Show Empty State</button>
+      </div>
+
+      <section id="todo-root" class="todo-region" aria-live="polite"></section>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
