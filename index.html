@@ -3,36 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo App</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <title>Todo Web App</title>
   </head>
   <body>
-    <main class="page">
-      <section class="todo-shell" aria-labelledby="todo-title">
-        <header class="todo-header">
-          <p class="eyebrow">Task Manager</p>
-          <h1 id="todo-title">Todo App</h1>
-        </header>
-
-        <section class="todo-content" aria-label="Todo content area">
-          <form id="todo-form" class="todo-form" autocomplete="off">
-            <label class="sr-only" for="todo-input">Todo title</label>
-            <input
-              id="todo-input"
-              name="todo"
-              type="text"
-              placeholder="What needs to be done?"
-              maxlength="120"
-              required
-            />
-            <button id="add-todo-button" type="submit">Add</button>
-          </form>
-
-          <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
-        </section>
-      </section>
-    </main>
-
-    <script src="./app.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
