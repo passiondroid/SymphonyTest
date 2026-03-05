@@ -1,0 +1,147 @@
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #132a38;
+  background: linear-gradient(120deg, #eef6fa, #d6ecf7);
+  line-height: 1.4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+}
+
+.todo-card {
+  width: min(100%, 640px);
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 40px rgba(0, 30, 53, 0.15);
+}
+
+.todo-card__header h1 {
+  margin: 0.1rem 0 0.4rem;
+}
+
+.todo-card__header p {
+  margin: 0.2rem 0;
+  color: #355064;
+}
+
+.todo-card__kicker {
+  margin: 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #2f7ca7;
+}
+
+.todo-input {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.todo-input input {
+  flex: 1;
+  border: 1px solid #bdd9e8;
+  border-radius: 8px;
+  padding: 0.7rem 0.9rem;
+  font-size: 1rem;
+}
+
+.todo-input button,
+.todo-item__delete {
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 0.95rem;
+  background: #2d89b8;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.todo-card__meta {
+  margin: 1rem 0;
+  color: #2c4658;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #c8dfe9;
+  border-radius: 8px;
+  background: #f9fdff;
+}
+
+.todo-item label {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.completed {
+  color: #708a99;
+  text-decoration: line-through;
+}
+
+.todo-empty {
+  color: #3a5567;
+  font-style: italic;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 640px) {
+  .todo-card {
+    padding: 1.1rem;
+  }
+
+  .todo-input {
+    flex-direction: column;
+  }
+
+  .todo-input button,
+  .todo-item__delete {
+    width: 100%;
+  }
+
+  .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
